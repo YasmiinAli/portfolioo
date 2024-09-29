@@ -4,7 +4,10 @@ let portfolioLink = document.querySelector('#portfolioPage');
 let blogLink = document.querySelector('#blogPage');
 let contactLink = document.querySelector('#contactPage');
 let closeBtn = document.querySelector('.btnclose');
-let images =document.querySelectorAll('.imgCards .imgCard')
+let images =document.querySelectorAll('.imgCards .imgCard ');
+let links = document.querySelectorAll('.portfoliolinks li')
+console.log(links);
+
 
 // console.log(images[0].className.includes('brand'));
 
@@ -48,31 +51,65 @@ closeBtn.addEventListener('click', function() {
 
 
     // filter***************
-
-    brandBtn.addEventListener('click', function() {
+    allBtn.addEventListener('click', function() {
         for(let i=0; i<images.length;i++){
-            if(!images[i].className.includes('brand')) {
-                images[i].classList.add('hide');
-                allBtn.classList.remove('active')
-                brandBtn.classList.add('active')
-
+            if(images[i]) {
+                images[i].style.display='';
+                // allBtn.classList.remove('active')
+                // brandBtn.classList.add('active')
+            }
+            else {
+                images[i].style.display='none'
             }
         }
     })
 
-    // photoBtn.addEventListener('click', function() {
-        
-    //     for(let i=0; i<images.length;i++){
-    //         if(!images[i].className.includes('photos')) {
-    //             images[i].classList.add('hide')
-    //         }
-    //     }
-    // })
+    brandBtn.addEventListener('click', function() {
+        for(let i=0; i<images.length;i++){
+            if(images[i].className.includes('brand')) {
+                images[i].style.display='';
+                // allBtn.classList.remove('active')
+                // brandBtn.classList.add('active')
+            }
+            else {
+                images[i].style.display='none'
+            }
+        }
+    })
 
-    // designBtn.addEventListener('click', function() {
-    //     for(let i=0; i<images.length;i++){
-    //         if(!images[i].className.includes('design')) {
-    //             images[i].classList.add('hide')
-    //         }
-    //     }
-    // })
+    photoBtn.addEventListener('click', function() {
+        
+        for(let i=0; i<images.length;i++){
+            if(images[i].className.includes('photos')) {
+                 images[i].style.display='';
+                // allBtn.classList.remove('active')
+                // photoBtn.classList.add('active')
+            }
+            else {
+                images[i].style.display='none'
+            }
+        }
+    })
+
+    designBtn.addEventListener('click', function() {
+        for(let i=0; i<images.length;i++){
+            if(images[i].className.includes('design')) {
+                 images[i].style.display='';
+                // allBtn.classList.remove('active')
+                // designBtn.classList.add('active')
+            }
+            else {
+                images[i].style.display='none'
+            }
+        }
+    })
+
+    for(let i =0; i< links.length; i++){
+    links[i].onclick = function(){
+        links.forEach(function(btn){
+          btn.style = '';
+      });
+        this.style.color = '#009e66';
+        this.style.borderBottom ='1px solid #009e66'
+    }
+}
