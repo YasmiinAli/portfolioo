@@ -25,6 +25,10 @@ let blogPage;
 let contactPage;
 
 
+var typed = new Typed('.multitext',
+    {strings:['Frontend developer','Freelancer','Web developer'],typeSpeed:100,loop:true})
+
+
 aboutLink?.addEventListener('click',function() {
     aboutPage = window.open('about.html','_self')
 })
