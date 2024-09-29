@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #fff;
+}
+::selection {
+    background-color: var(--green);
+    color: white;
+}
+:root {
+    --green:#009e66;
+    --black:#161616;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+li {
+    cursor: pointer;
+}
+.nav-link {
+    color: #c2bfbf !important;
+    margin-right: 15px;
+    font-weight: bold;
+}
+header {
+    background-image: url('../images/home.jpg');
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+.layer {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.logo {
+    width: 35%;
+}
+.navbar-toggler {
+    background-color: white !important;
+}
+.data h2 {
+    font-size: 75px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.languages p {
+    text-transform: uppercase;
+    rotate: 90deg;
+}
+.socialMedia li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.page {
+    background-color: #101010 ;
+    min-height: 100vh;
+}
+.about h2 {
+    font-size: 50px;
+}
+.about .question ,.myemail, .imgCard .link {
+    color: var(--green) ;
+}
+.details {
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgb(190, 187, 187,0.4);
+}
+.data {
+    font-size: 14px;
+    font-weight: 600;
+}
+.data p {
+    margin-right: 15px;
+} 
+.links li {
+    margin-right: 10px;
+}
+.about .btn {
+    width: 150px;
+    background-color:var(--green);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btnclose {
+    cursor: pointer;
+    position: fixed;
+    top:25px;
+    right: 0;
+}
+.service ,.plan {
+    background-color: var(--black);
+    padding: 25px 30px ;
+    margin-bottom: 15px;
+
+}
+.service:hover {
+    border-bottom: 1px solid var(--green);
+    cursor: pointer;
+}
+.service i ,.plan i {
+    color:var(--green);
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+.carousel-indicators  {
+    bottom: -50px;
+}
+.carousel-indicators [data-bs-target] {
+    background-clip: unset;
+    border-radius: 100%;
+    width: 15px;
+}
+.educards .card {
+    background-color: var(--black);
+    border-left: 3px solid var(--green);
+}
+.borderBottom {
+    border-bottom: 1px solid #313131 ;
+    margin-top: 15px;
+}
+.bgprogress {
+    background-color: var(--green);
+}
+.skill {
+    margin-bottom: 30px;
+}
+.date {
+    background-color: var(--green);
+}
+.blogcard{
+    margin-bottom: 75px;
+}
+.blogcard img ,.imgCard img{
+    width: 100%;
+}
+.active {
+    color: var(--green);
+    border-bottom: 1px solid var(--green);
+}
+.imgCard {
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.dataMe {
+    height: 100%;
+    width: 100%;
+    top: 100;
+    left: 100%;
+    background-color: rgba(65, 64, 64, 0.6);
+    
+}
+.imgCard {
+    overflow: hidden;
+}
+.imgCard:hover .dataMe {
+    top: 0;
+    left: 0;
+    transition: all 1s ease-in-out;
+}
+.hide {
+    display: none;
+    transition: all 2s;
+}
+
+
+
+
+
+
+@media screen and (max-width:990px) {
+    .data h2 {
+        font-size: 50px;
+    }
+    .languages, .socialMedia {
+        display: none;
+    }
+    .about h2 {
+        font-size: 30px;
+    }
+    .info img {
+        
+        border-radius: 50%;
+        height: 250px;
+        width: 250px !important;
+    }
+
+}
